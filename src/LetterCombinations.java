@@ -21,11 +21,7 @@ public class LetterCombinations {
 
     public List<String> letterCombinations(String digits) {
         if(digits == null || digits.length()<1){
-            return new ArrayList<>();
-        }
-
-        if(digits.length() == 1){
-            return Arrays.asList(map.get(digits).split(""));
+            return result;
         }
         combination("", digits);
         return result;
