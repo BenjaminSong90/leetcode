@@ -4,7 +4,7 @@ import java.util.List;
 
 public class PermutationSequence60 {
     public static void main(String[] a) {
-        System.out.println("result: "+new PermutationSequence60().getPermutation(3,2));
+        System.out.println("result: "+new PermutationSequence60().getPermutation(3,1));
     }
 
     public String getPermutation(int n, int k) {
@@ -17,7 +17,7 @@ public class PermutationSequence60 {
 
         --k;
         StringBuilder result = new StringBuilder();
-        while (num.size() > 1 && k != 0)
+        while (num.size() > 0)
         {
             int x = num.size() - 1;
             int seq = k / f[x];
@@ -26,7 +26,6 @@ public class PermutationSequence60 {
             k %= f[x];
         }
 
-        for (int d : num) result.append(d);
         return result.toString();
     }
 
