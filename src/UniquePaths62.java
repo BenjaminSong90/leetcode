@@ -49,4 +49,27 @@ public class UniquePaths62 {
 
     }
 
+/* 倒推法
+public int uniquePaths(int m, int n)
+    {
+
+        int[][] num = new int[n][m];
+        num[n - 1][m - 1] = 1;
+        for (int i = n - 1; i >= 0; i--) {
+            for (int j = m - 1; j >= 0; j--) {
+                if (i + 1 < n && j + 1 < m) {
+                    num[i][j] = num[i + 1][j] + num[i][j + 1];
+                } else if (i + 1 < n) {
+                    num[i][j] = num[i + 1][j];
+                } else if (j + 1 < m) {
+                    num[i][j] = num[i][j + 1];
+                }
+            }
+        }
+        return num[0][0];
+    }
+*/
+
+
+
 }
