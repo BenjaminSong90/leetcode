@@ -13,15 +13,24 @@ public class GrayCode89 {
 
     }
 
-    public List<Integer> grayCode(int n) {
+//    public List<Integer> grayCode(int n) {
+//        List<Integer> res = new ArrayList<>();
+//        res.add(0);
+//        for (int i = 0; i < n; ++i) {
+//            int size = res.size();
+//            for (int j = size - 1; j >= 0; --j) {
+//                res.add(res.get(j) | (1 << i));
+//            }
+//        }
+//        return res;
+//    }
+    
+    public List<Integer> grayCode(int n){
         List<Integer> res = new ArrayList<>();
-        res.add(0);
-        for (int i = 0; i < n; ++i) {
-            int size = res.size();
-            for (int j = size - 1; j >= 0; --j) {
-                res.add(res.get(j) | (1 << i));
-            }
+        for (int i = 0; i < Math.pow(2,n); ++i) {
+            res.add((i >> 1) ^ i);
         }
         return res;
     }
+    
 }
