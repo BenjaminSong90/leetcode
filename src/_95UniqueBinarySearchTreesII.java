@@ -9,29 +9,25 @@ public class _95UniqueBinarySearchTreesII {
     }
 
     public List<TreeNode> generateTrees(int n) {
-        List<TreeNode>[][] dp = new List[n + 2][n + 2];
-        for(int i = 1; i <= n + 1; i++) {
-            dp[i][i - 1] = new ArrayList<>();
-            dp[i][i - 1].add(null);
+        if (n == 0) return new ArrayList<TreeNode>();
+        return generateTrees(1, n);
+    }
+
+    private List<TreeNode> generateTrees(int l, int r) {
+        List<TreeNode> ans = new ArrayList<>();
+        if (l > r) {
+            ans.add(null);
+            return ans;
         }
-        for(int len = 0; len < n; len++) {
-            for(int i = 1; i + len <= n; i++) {
-                int j = i + len;
-                dp[i][j] = new ArrayList<>();
-                if(len == 0) {
-                    dp[i][j].add(new TreeNode(i));
-                } else {
-                    for(int k = i; k <= j; k++) {
-                        for(TreeNode left : dp[i][k - 1]) {
-                            for(TreeNode right : dp[k + 1][j]) {
-                                dp[i][j].add(new TreeNode(k, left, right));
-                            }
-                        }
-                    }
+        for (int i = l; i <= r; ++i)
+            for (TreeNode left : generateTrees(l, i - 1))
+                for (TreeNode right: generateTrees(i + 1, r)) {
+                    TreeNode root = new TreeNode(i);
+                    root.left = left;
+                    root.right = right;
+                    ans.add(root);
                 }
-            }
-        }
-        return dp[1][n];
+        return ans;
     }
 
 
