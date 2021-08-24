@@ -1,4 +1,3 @@
-
 public class RemoveNthNodeFromEndOfList {
     public static void main(String[] a) {
         ListNode head = new ListNode(1);

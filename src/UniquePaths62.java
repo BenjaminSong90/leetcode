@@ -1,4 +1,3 @@
-
 public class UniquePaths62 {
     public static void main(String[] a) {
         System.out.println(new UniquePaths62().uniquePaths(2,2));

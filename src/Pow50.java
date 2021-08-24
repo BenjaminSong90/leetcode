@@ -1,4 +1,3 @@
-
 public class Pow50 {
     public static void main(String[] a) {
         System.out.println("result : "+ new Pow50().myPow(0.00001,2147483647));

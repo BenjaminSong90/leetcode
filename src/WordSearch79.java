@@ -1,4 +1,3 @@
-
 public class WordSearch79 {
     public static void main(String[] a) {
         char[][] board = {

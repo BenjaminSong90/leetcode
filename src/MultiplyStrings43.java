@@ -1,4 +1,3 @@
-
 public class MultiplyStrings43 {
 
     public static void main(String[] a){

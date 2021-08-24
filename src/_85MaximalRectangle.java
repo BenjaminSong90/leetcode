@@ -1,5 +1,3 @@
-import javafx.util.Pair;
-
 import java.util.Arrays;
 
 public class _85MaximalRectangle {

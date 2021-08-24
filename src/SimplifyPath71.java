@@ -6,12 +6,12 @@ public class SimplifyPath71 {
     public static void main(String[] a) {
 //        String path = "/home//foo/";
 //        String path = "/a/./b/../../c/";
-//        String path = "/a/../../b/../c//.//";
+        String path = "/a/../../b/../c//.//";
 //        String path = "/a//b////c/d//././/..";
 //        String path = "/home//foo/";
 //        String path = "/home/";
 //        String path = "/../";
-        String path = "/home/../../..";
+//        String path = "/home/../../..";
         System.out.println(new SimplifyPath71().simplifyPath(path));
     }
 

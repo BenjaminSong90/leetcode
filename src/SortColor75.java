@@ -2,9 +2,9 @@ import java.util.Arrays;
 
 public class SortColor75 {
     public static void main(String[] a) {
-//        int[] colors = {2,0,2,1,1,0};
+        int[] colors = {2,0,2,1,1,0};
 //        int[] colors = {2};
-        int[] colors = {2,2};
+//        int[] colors = {2,2};
 
         new SortColor75().sortColors(colors);
         System.out.println("result: " + Arrays.toString(colors));

@@ -1,4 +1,3 @@
-
 public class MinimumPathSum64 {
     public static void main(String[] a) {
 //        int[][] grid = {

@@ -7,7 +7,7 @@ public class Permutations46 {
 
     public static void main(String[] a) {
 
-        int[] nums = {1, 2, 3};
+        int[] nums = {1, 2, 3, 4};
 
         List<List<Integer>> result = new Permutations46().permute(nums);
 
